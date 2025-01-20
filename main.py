@@ -1,24 +1,12 @@
-# Matplotlib: A Comprehensive Guide
-#
-# This script explores all key concepts of Matplotlib, with examples using Pandas and NumPy.
-
 # Importing Necessary Libraries
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from mpl_toolkits.mplot3d import Axes3D
 
 # 1. Introduction to Matplotlib
 print("# Introduction to Matplotlib\n")
 print("Matplotlib is a versatile library for creating static, animated, and interactive visualizations in Python.")
-
-# Example: Simple Line Plot
-x = np.linspace(0, 10, 100)
-y = np.sin(x)
-plt.plot(x, y)
-plt.title("Simple Line Plot")
-plt.xlabel("X-axis")
-plt.ylabel("Y-axis")
-plt.show()
 
 # 2. Basic Plotting
 print("# Basic Plotting\n")
@@ -54,6 +42,8 @@ plt.show()
 print("# Customizing Plots\n")
 
 # Example: Customizing Line Styles and Colors
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
 plt.plot(x, y, label='sin(x)', linestyle='--', color='red')
 plt.title("Customized Line Plot")
 plt.xlabel("X-axis")
@@ -118,7 +108,6 @@ plt.show()
 print("# Advanced Visualizations\n")
 
 # Example: 3D Plot
-from mpl_toolkits.mplot3d import Axes3D
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 x = np.linspace(-5, 5, 100)
@@ -128,5 +117,3 @@ z = np.sin(np.sqrt(x**2 + y**2))
 ax.plot_surface(x, y, z, cmap='plasma')
 plt.title("3D Surface Plot")
 plt.show()
-
-# Explore more features and practice using this comprehensive guide.
